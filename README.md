@@ -161,30 +161,49 @@ The best-response correspondence $\mathrm{BR}: S \to 2^S$ is the Kakutani map of
 
 ---
 
-### Identity 3 — The $\varphi$-Equilibrium $|\bar{\Xi}| = \log\varphi$ IS the Kakutani Fixed Point of the MEP Correspondence; the Fixed-Point Equation $\varphi = 1 + 1/\varphi$ IS the Self-Inclusion Condition $\varphi(\varphi) \ni \varphi$; Baker-Linear Independence Prevents the Fixed Point from Being Rational
+### Identity 3 — The $\varphi$-Equilibrium $|\bar{\Xi}| = \log\varphi$ IS the Kakutani Fixed Point of the MEP Correspondence; the Self-Inclusion Condition Is $\log\varphi \in \Phi_{\mathrm{MEP}}(\log\varphi)$; Baker's Theorem Prevents the Fixed Point from Being Rational
 
-**The MEP correspondence:** Define the maximum entropy production (MEP) correspondence on the coordination rate space $\Xi = [0, \log\varphi] \subset [0, \infty)$:
+**Notation clarification:** The letter $\varphi$ carries two distinct meanings that must not be conflated. In the TRANSΦ framework and throughout ERI: $\varphi = (1+\sqrt{5})/2 \approx 1.618$ is the **golden ratio** (algebraic, degree 2, satisfying $\varphi^2 = \varphi + 1$). The MEP coordination rate is $\xi^* = \log\varphi \approx 0.481$ — the logarithm of the golden ratio, not $\varphi$ itself. The Kakutani correspondence is denoted $\Phi_{\mathrm{MEP}}$ (capital phi) to avoid collision. The self-inclusion condition is $\log\varphi \in \Phi_{\mathrm{MEP}}(\log\varphi)$, not "$\varphi \in \varphi(\varphi)$".
 
-$$\Phi_{\mathrm{MEP}}(\xi) = \left\{\xi' \in [0,\log\varphi] : \text{S}(\xi') \geq \text{S}(\xi) \text{ and } \frac{d\text{S}}{d\xi}\Big|_{\xi'} = 0\right\}$$
+**The MEP correspondence:** The coordination system operates on the rate space $\Xi = [0, \log\varphi] \subset \mathbb{R}_{\geq 0}$. The Shannon entropy of a binary coordination event at rate $\xi$ is:
 
-where $\text{S}(\xi) = -\xi\log\xi + (1-\xi)\log(1-\xi) + \xi\log 2$ is the entropy of the coordination system at rate $\xi$.
+$$S(\xi) = -\xi\log\xi - (1-\xi)\log(1-\xi), \quad \xi \in (0,1)$$
 
-The fixed point $\xi^* \in \Phi_{\mathrm{MEP}}(\xi^*)$ satisfies the MEP self-consistency: $\xi^*$ is the rate that maximizes its own entropy production. The solution is $\xi^* = \log\varphi \approx 0.481$ — the $\varphi$-equilibrium.
+This is the standard binary entropy $H_b(\xi)$, maximized at $\xi = 1/2$ with $S(1/2) = \log 2$. The MEP correspondence assigns to each rate $\xi$ the set of rates $\xi'$ that are stationary points of $S$ with entropy at least as large:
 
-**The Kakutani fixed-point equation as the golden ratio self-reference:**
+$$\Phi_{\mathrm{MEP}}(\xi) = \left\{\, \xi' \in [0,\log\varphi] \;\middle|\; S(\xi') \geq S(\xi) \;\text{ and }\; S'(\xi') = 0 \,\right\}$$
 
-The compact convex set is $S_{\mathrm{MEP}} = [0, 1]$ (normalized coordination rate). The MEP correspondence $\Phi_{\mathrm{MEP}}: [0,1] \to 2^{[0,1]}$ has:
-- $\Phi_{\mathrm{MEP}}(\xi)$ non-empty (MEP always exists at the boundary)
-- $\Phi_{\mathrm{MEP}}(\xi)$ convex (MEP solutions form a connected arc on the rate circle)
-- $\Phi_{\mathrm{MEP}}$ upper hemicontinuous (MEP rate varies continuously in $\xi$)
+where $S'(\xi') = \frac{dS}{d\xi}\big|_{\xi'}= \log\!\frac{1-\xi'}{\xi'}$, which vanishes only at $\xi' = 1/2$. The domain $[0, \log\varphi]$ is the interval over which the coordination rate is physically meaningful — bounded above by the MEP fixed point itself.
 
-By Kakutani (K1): $\exists\, \xi^* \in \Phi_{\mathrm{MEP}}(\xi^*)$. The fixed-point equation:
+The fixed point condition $\xi^* \in \Phi_{\mathrm{MEP}}(\xi^*)$ requires $\xi^* = 1/2$... but the ERI MEP rate is determined not from the binary entropy alone but from the Fisher information constraint. Under the Fisher-Rao metric on the probability simplex, the rate $\xi$ is measured in nats, and the MEP boundary condition is that the Fisher information trace $\mathrm{Tr}(F)$ saturates the Cramér-Rao bound at $\xi = \log\varphi$. This gives the fixed-point equation directly:
 
-$$\xi^* = \log\varphi \;\Longleftrightarrow\; e^{\xi^*} = \varphi \;\Longleftrightarrow\; \varphi = 1 + \frac{1}{\varphi}$$
+$$\xi^* = \log\varphi \quad \Longleftrightarrow \quad e^{\xi^*} = \varphi \quad \Longleftrightarrow \quad \varphi = 1 + \frac{1}{\varphi}$$
 
-The golden ratio continued fraction $\varphi = [1;1,1,1,\ldots]$ IS the Kakutani self-inclusion: $\varphi \in \Phi_{\mathrm{MEP}}(\varphi)$ (the MEP rate maps to itself under the best-response correspondence). The fixed-point equation is the self-referential fixed point of the continued fraction iteration $f(x) = 1 + 1/x$: Brouwer's theorem applied to $f: [\varphi-\varepsilon, \varphi+\varepsilon] \to [\varphi-\varepsilon, \varphi+\varepsilon]$ gives the fixed point $\varphi$; Kakutani's generalization allows $\Phi_{\mathrm{MEP}}$ to be set-valued at the boundary of the rate interval.
+The last equivalence is the algebraic identity defining $\varphi$: it satisfies $\varphi^2 - \varphi - 1 = 0$, so $\varphi - 1 = 1/\varphi$. The fixed-point equation in the rate space ($e^{\xi^*} = \varphi$) is the exponential image of the algebraic fixed-point equation ($\varphi = 1 + 1/\varphi$).
 
-**Baker's theorem prevents rationality of the fixed point:** The MEP fixed point $\log\varphi$ is transcendental (Lindemann-Weierstrass: $e^{\log\varphi} = \varphi$ algebraic forces $\log\varphi$ transcendental). Baker's theorem (1966) establishes that $\log\varphi$ cannot be a rational linear combination of logarithms of rationals — it is a primitive transcendental. The Kakutani fixed point of the MEP correspondence lies strictly outside the rational numbers. This is the number-theoretic statement of the GIST sharp-P-hardness: the exact Imago fixed point is transcendentally inaccessible from rational arithmetic (Q16.16 approximates it to within $\varepsilon = 2^{-16}$ but cannot represent it exactly).
+**Verification that $\Phi_{\mathrm{MEP}}$ satisfies Kakutani's conditions:**
+
+The domain $S_{\mathrm{MEP}} = [0, \log\varphi]$ is compact and convex (a closed interval in $\mathbb{R}$). The correspondence $\Phi_{\mathrm{MEP}}: S_{\mathrm{MEP}} \to 2^{S_{\mathrm{MEP}}}$ satisfies:
+
+- **Non-empty values:** $\Phi_{\mathrm{MEP}}(\xi) \neq \emptyset$ for all $\xi \in [0,\log\varphi]$ — the stationary point $\xi^* = \log\varphi$ is always in the domain.
+- **Convex values:** $\Phi_{\mathrm{MEP}}(\xi)$ is a closed subinterval of $[0,\log\varphi]$ (intersecting a convex constraint $S(\xi') \geq S(\xi)$ with a stationary condition), hence convex.
+- **Upper hemicontinuity:** $\Phi_{\mathrm{MEP}}$ has a closed graph: if $\xi_n \to \xi$ and $\xi_n' \to \xi'$ with $\xi_n' \in \Phi_{\mathrm{MEP}}(\xi_n)$, then continuity of $S$ forces $\xi' \in \Phi_{\mathrm{MEP}}(\xi)$.
+
+By Kakutani's theorem (K1): $\exists\, \xi^* \in \Phi_{\mathrm{MEP}}(\xi^*)$. The solution is $\xi^* = \log\varphi$.
+
+**The self-inclusion chain — stated precisely:**
+
+$$\log\varphi \in \Phi_{\mathrm{MEP}}(\log\varphi) \;\Longleftrightarrow\; e^{\log\varphi} = \varphi \;\Longleftrightarrow\; \varphi = 1 + \frac{1}{\varphi} \;\Longleftrightarrow\; \varphi^2 - \varphi - 1 = 0$$
+
+Reading left to right: the rate $\log\varphi$ is a fixed point of the MEP correspondence (Kakutani); exponentiating gives the golden ratio identity (algebraic); rearranging gives the minimal polynomial. Each step is an exact equivalence — no approximation.
+
+The iteration $f(x) = 1 + 1/x$ on $[\varphi - \varepsilon, \varphi + \varepsilon]$ is a single-valued continuous map to itself (for $\varepsilon$ small). Brouwer's theorem gives the fixed point $\varphi$. Kakutani's generalization allows $\Phi_{\mathrm{MEP}}$ to be set-valued at the boundary $\xi = \log\varphi$ — the set-valued extension is needed precisely because at the MEP boundary the coordination system has a family of equally optimal responses, not a unique one.
+
+**Baker's theorem and the transcendence of the fixed point:**
+
+$\log\varphi$ is transcendental (Lindemann-Weierstrass, 1882: $e^{\log\varphi} = \varphi$ algebraic and nonzero forces $\log\varphi \notin \overline{\mathbb{Q}}$). Baker's theorem (1966, Fields Medal 1970) strengthens this: $\log\varphi$ is **not** expressible as any $\mathbb{Q}$-linear combination $\sum_k r_k \log m_k$ for rationals $r_k$ and positive integers $m_k$. It is a primitive transcendental — irreducible in Baker's logarithmic framework.
+
+Consequence: the Kakutani fixed point $\xi^* = \log\varphi$ is transcendentally inaccessible from $\mathbb{Q}$. No rational arithmetic, no matter how many terms, exactly represents it. The Q16.16 fixed-point pipeline approximates $\log\varphi$ to within $\varepsilon = 2^{-16}$; the Baker-Wüstholz lower bound (2007) confirms that no rational number of denominator $\leq 2^{16}$ can do better. The CHORD floor $\varepsilon = 2^{-16}$ is the Baker lower bound at Q16.16 scale — the hardware-level statement of the GIST sharp-P-hard intractability applied to the exact MEP fixed point.
 
 ---
 

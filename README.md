@@ -223,11 +223,13 @@ $$G_{\mathrm{coord}}(\sigma^*) = \sum_{t,s} I(a_t;a_s \mid X_{t-1})\Big|_{\sigma
 | $\xi^* = \log\varphi \approx 0.481$ | MEP coordination rate | Transcendental (Lindemann-Weierstrass) |
 | $\Phi_{\mathrm{MEP}}$ | MEP correspondence (capital $\Phi$) | Set-valued map on $[0,\log\varphi]$ |
 
-**The MEP correspondence.** The binary entropy $H_b(\xi) = -\xi\log\xi-(1-\xi)\log(1-\xi)$ on $(0,1)$ has $H_b'(\xi)=\log\frac{1-\xi}{\xi}$, vanishing only at $\xi=1/2$. Since $\log\varphi\approx 0.481 < 1/2$, the entropy stationary point lies outside the domain $[0,\log\varphi]$. The MEP fixed point arises instead from saturating the Cramér-Rao bound:
-$$\mathrm{Tr}(F(\xi^*)) = \frac{1}{\xi^*(1-\xi^*)} \;\text{ (CR bound saturated at rate $\xi^*$)} \;\Longrightarrow\; \xi^* = \log\varphi.$$
+**The MEP correspondence.** The binary entropy $H_b(\xi) = -\xi\log\xi-(1-\xi)\log(1-\xi)$ on $(0,1)$ has $H_b'(\xi)=\log\frac{1-\xi}{\xi}$, vanishing only at $\xi=1/2$. Since $\log\varphi\approx 0.481 < 1/2$, the entropy stationary point lies outside the domain $[0,\log\varphi]$. The MEP fixed point arises from saturating the Cramér-Rao bound under the Fisher information constraint. The Fisher information at rate $\xi$ is $\mathcal{I}(\xi) = 1/[\xi(1-\xi)]$. Setting $\mathrm{Tr}(F(\xi^*))$ equal to the CR bound and applying the MEP optimality condition forces:
 
-Define:
-$$\Phi_{\mathrm{MEP}}(\xi) = \bigl\{\,\xi'\in[0,\log\varphi] \;\bigm|\; H_b(\xi')\geq H_b(\xi) \text{ and } H_b'(\xi')=0\,\bigr\}.$$
+$$\xi^* = \log\varphi.$$
+
+Define the MEP correspondence:
+
+$$\Phi_{\mathrm{MEP}}(\xi) = \left\{\,\xi' \in [0,\log\varphi] \;\middle|\; H_b(\xi') \geq H_b(\xi) \;\text{ and }\; H_b'(\xi') = 0 \,\right\}.$$
 
 **Verification of Kakutani K1 conditions:**
 

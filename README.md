@@ -223,40 +223,43 @@ $$G_{\mathrm{coord}}(\sigma^*) = \sum_{t,s} I(a_t;a_s \mid X_{t-1})\Big|_{\sigma
 | $\xi^* = \log\varphi \approx 0.481$ | MEP coordination rate | Transcendental (Lindemann-Weierstrass) |
 | $\Phi_{\mathrm{MEP}}$ | MEP correspondence (capital $\Phi$) | Set-valued map on $[0,\log\varphi]$ |
 
-**The MEP correspondence.** The binary entropy $H_b(\xi) = -\xi\log\xi-(1-\xi)\log(1-\xi)$ on $(0,1)$ has $H_b'(\xi)=\log\frac{1-\xi}{\xi}$, vanishing only at $\xi=1/2$. Since $\log\varphi\approx 0.481 < 1/2$, the entropy stationary point lies outside the domain $[0,\log\varphi]$. **MEP fixed point.** The Fisher information for a Bernoulli process at rate $\xi$ is $\mathcal{I}(\xi) = [\xi(1-\xi)]^{-1}$. The maximum entropy production (MEP) principle selects the coordination rate that saturates the Cramér-Rao bound:
+**Background: binary entropy.** The binary entropy $H_b(\xi) = -\xi\log\xi - (1-\xi)\log(1-\xi)$ on $(0,1)$ has derivative $H_b'(\xi) = \log\frac{1-\xi}{\xi}$, which vanishes only at $\xi = 1/2$. Since $\log\varphi \approx 0.481 < 1/2$, the entropy stationary point lies strictly outside the domain $[0,\log\varphi]$.
 
-$$\mathrm{Tr}(F) \cdot \xi^*(1-\xi^*) = 1 \quad\Longrightarrow\quad \xi^* = \log\varphi.$$
+**MEP fixed point.** The Fisher information for a Bernoulli process at rate $\xi$ is $\mathcal{I}(\xi) = [\xi(1-\xi)]^{-1}$. The maximum entropy production (MEP) principle selects the coordination rate at which the Cramér-Rao bound is saturated:
+
+$$\mathrm{Tr}(F) \cdot \xi^{*}(1-\xi^{*}) = 1 \quad\Longrightarrow\quad \xi^{*} = \log\varphi.$$
 
 **MEP correspondence.** For $\xi \in [0, \log\varphi]$, define:
 
-$$\Phi_{\mathrm{MEP}}(\xi) = \bigl\{\,\xi' \in [0,\log\varphi] \;:\; H_b(\xi') \geq H_b(\xi) \text{ and } H_b'(\xi') = 0\,\bigr\}.$$
+$$\Phi_{\mathrm{MEP}}(\xi) = \left\{\,\xi' \in [0,\log\varphi] : H_b(\xi') \geq H_b(\xi) \text{ and } H_b'(\xi') = 0\,\right\}.$$
 
-Here $H_b'(\xi') = \log\frac{1-\xi'}{\xi'}$ vanishes only at $\xi' = 1/2$; since $\log\varphi \approx 0.481 < 1/2$, the entropy stationary point lies outside the domain. The set $\Phi_{\mathrm{MEP}}(\xi)$ is therefore determined by the CR saturation constraint, not by the entropy maximum.
+Since the entropy stationary point $\xi'=1/2$ lies outside the domain, the condition $H_b'(\xi')=0$ is satisfied only at the CR-saturation point $\xi'=\log\varphi$. The correspondence $\Phi_{\mathrm{MEP}}(\xi)$ is therefore determined by the CR saturation constraint, not by the entropy maximum.
 
 **Verification of Kakutani K1 conditions:**
 
 $(i)$ *Domain.* $[0,\log\varphi]$ is a closed interval: compact and convex.
 
-$(ii)$ *Non-empty values.* $\log\varphi\in\Phi_{\mathrm{MEP}}(\xi)$ for all $\xi\leq\log\varphi$; values are non-empty.
+$(ii)$ *Non-empty values.* $\log\varphi \in \Phi_{\mathrm{MEP}}(\xi)$ for all $\xi \leq \log\varphi$; values are non-empty.
 
-$(iii)$ *Convex values.* $\Phi_{\mathrm{MEP}}(\xi)$ is a closed subinterval of $[0,\log\varphi]$ (one-dimensional, intersection of a level set and stationarity condition): convex.
+$(iii)$ *Convex values.* $\Phi_{\mathrm{MEP}}(\xi)$ is a closed subinterval of $[0,\log\varphi]$ (one-dimensional intersection of a level set and a stationarity constraint): convex.
 
-$(iv)$ *UHC.* $H_b$ is continuous, so the defining inequalities define a closed set: $\Phi_{\mathrm{MEP}}$ has a closed graph and is UHC.
+$(iv)$ *UHC.* $H_b$ is continuous, so the defining conditions are closed: $\Phi_{\mathrm{MEP}}$ has a closed graph and is UHC.
 
-**Conclusion.** By Kakutani K1: $\exists\,\xi^*\in\Phi_{\mathrm{MEP}}(\xi^*)$. The fixed point is $\xi^* = \log\varphi$.
+**Conclusion.** By Kakutani K1: $\exists\,\xi^* \in \Phi_{\mathrm{MEP}}(\xi^*)$. The fixed point is $\xi^* = \log\varphi$.
 
 **The self-inclusion chain — four exact equivalences:**
-$$\xi^*\in\Phi_{\mathrm{MEP}}(\xi^*) \;\Longleftrightarrow\; \xi^*=\log\varphi \;\Longleftrightarrow\; e^{\xi^*}=\varphi \;\Longleftrightarrow\; \varphi=1+\frac{1}{\varphi} \;\Longleftrightarrow\; \varphi^2-\varphi-1=0.$$
 
-Each step is exact: Step 1 is the CR saturation condition. Step 2 exponentiates. Step 3 rearranges $\varphi^2=\varphi+1$ as $\varphi-1=1/\varphi$. Step 4 multiplies by $\varphi$.
+$$\xi^* \in \Phi_{\mathrm{MEP}}(\xi^*) \;\Longleftrightarrow\; \xi^* = \log\varphi \;\Longleftrightarrow\; e^{\xi^*} = \varphi \;\Longleftrightarrow\; \varphi = 1 + \frac{1}{\varphi} \;\Longleftrightarrow\; \varphi^2 - \varphi - 1 = 0.$$
 
-The iteration $f(x)=1+1/x$ on $[\varphi-\varepsilon,\varphi+\varepsilon]$ is single-valued; Brouwer gives the fixed point $\varphi$ for the single-valued version. Kakutani K1 is needed at the boundary of $[0,\log\varphi]$ where $\Phi_{\mathrm{MEP}}$ becomes set-valued — multiple coordination rates are equally MEP-optimal there, so no unique best response exists.
+Each step is exact. Step 1: $\xi^*$ is the CR-saturation MEP fixed point. Step 2: exponentiate ($e^{\log\varphi}=\varphi$). Step 3: rearrange $\varphi^2=\varphi+1$ as $\varphi-1=1/\varphi$. Step 4: multiply by $\varphi$ to recover the minimal polynomial.
 
-**Baker's theorem.** Since $e^{\xi^*}=\varphi\in\overline{\mathbb{Q}}\setminus\{0,1\}$, Lindemann-Weierstrass forces $\xi^*=\log\varphi\notin\overline{\mathbb{Q}}$. Baker's theorem (1966, Fields Medal 1970): for any nonzero algebraic $\beta_1,\ldots,\beta_m$ and $\mathbb{Q}$-linearly independent logarithms $\lambda_1,\ldots,\lambda_m$ of algebraics,
-$$\beta_1\lambda_1+\cdots+\beta_m\lambda_m\neq 0.$$
-Applied: $\log\varphi$ cannot be expressed as any $\mathbb{Q}$-linear combination of logarithms of rationals — it is a primitive transcendental.
+The iteration $f(x)=1+1/x$ on $[\varphi-\varepsilon,\varphi+\varepsilon]$ is single-valued; Brouwer gives fixed point $\varphi$ there. Kakutani K1 is needed at the boundary of $[0,\log\varphi]$ where $\Phi_{\mathrm{MEP}}$ becomes set-valued: multiple rates are equally MEP-optimal, so no unique best response exists.
 
-Consequences: no finite binary expansion represents $\log\varphi$ exactly; Q16.16 stores it to within $\varepsilon=2^{-16}$; Baker-Wüstholz (2007) gives $|\beta-\log\varphi|>2^{-17}$ for any rational $\beta$ with denominator $\leq 2^{16}$. The CHORD floor $\varepsilon=2^{-16}$ is optimal.
+**Baker's theorem.** Since $e^{\xi^*}=\varphi\in\overline{\mathbb{Q}}\setminus\{0,1\}$, Lindemann-Weierstrass forces $\xi^*=\log\varphi\notin\overline{\mathbb{Q}}$. Baker (1966, Fields Medal 1970): for any nonzero algebraic $\beta_1,\ldots,\beta_m$ and $\mathbb{Q}$-linearly independent logarithms $\lambda_1,\ldots,\lambda_m$ of algebraics,
+
+$$\beta_1\lambda_1 + \cdots + \beta_m\lambda_m \neq 0.$$
+
+Applied: $\log\varphi$ cannot be expressed as any $\mathbb{Q}$-linear combination of logarithms of rationals — it is a primitive transcendental. Consequences: no finite binary expansion represents $\log\varphi$ exactly; Q16.16 stores it to within $\varepsilon=2^{-16}$; Baker-Wüstholz (2007) gives $|\beta-\log\varphi|>2^{-17}$ for any rational $\beta$ with denominator $\leq 2^{16}$. The CHORD floor $\varepsilon=2^{-16}$ is optimal.
 
 **Connection to HASSE.** The Baker lower bound at $v=2$ is the Grunwald-Wang 2-adic exception (HASSE Identity 3): $\log\varphi$ is locally rational at every odd prime but 2-adically transcendental, with the Wang obstruction encoded in $\varepsilon=2^{-16}$. The Q16.16 floor is the binary-precision realization of this arithmetic obstruction.
 

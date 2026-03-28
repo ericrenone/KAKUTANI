@@ -229,7 +229,7 @@ $$\xi^* = \log\varphi.$$
 
 Define the MEP correspondence:
 
-$$\Phi_{\mathrm{MEP}}(\xi) = \left\{\,\xi' \in [0,\log\varphi] \;\middle|\; H_b(\xi') \geq H_b(\xi) \;\text{ and }\; H_b'(\xi') = 0 \,\right\}.$$
+$$\Phi_{\mathrm{MEP}}(\xi) \;=\; \Bigl\{\,\xi' \in [0,\log\varphi] : H_b(\xi') \geq H_b(\xi) \text{ and } H_b'(\xi') = 0\,\Bigr\}.$$
 
 **Verification of Kakutani K1 conditions:**
 
